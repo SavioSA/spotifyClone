@@ -12,18 +12,5 @@ export class BottomBarComponent implements OnInit{
   constructor() { }
 
   ngOnInit(): void {
-    const x = window.matchMedia("(max-width: 700px)").matches;
-    console.log(x)
-    window.onresize = this.reportWindowSize
   }
-
-  onResized(event: any) {
-    console.log(event)
-  }
-
-  reportWindowSize() {
-    console.log('mopa')
-  }
-
-
 }
