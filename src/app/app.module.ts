@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainModule } from './views/main/main.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SideBarModule } from './components/side-bar/side-bar.module';
@@ -18,11 +17,10 @@ import { BottomBarModule } from './components/bottom-bar/bottom-bar.module';
     RouterModule,
     BrowserModule,
     AppRoutingModule,
-    MainModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     SideBarModule,
-    BottomBarModule
+    BottomBarModule,
 
   ],
   providers: [],

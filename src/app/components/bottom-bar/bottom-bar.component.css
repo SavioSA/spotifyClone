@@ -1,8 +1,3 @@
-@font-face {
-  font-family: spotFont;
-  src: url("http://db.onlinewebfonts.com/t/01173b246d9d9ea808ea75a26b3b61bb.ttf");
-}
-
 /* Defining structures */
 
 .hide-bar-info {
@@ -135,6 +130,10 @@
   margin-left: 5px;
 }
 
+.play-pause:hover {
+  font-size: 35.5px;
+}
+
 .initial {
   margin-right: 5px;
 }
@@ -146,11 +145,19 @@
   font-size: 15px;
 }
 
+.small:hover {
+  color: #ffffff;
+}
+
 .medium {
   text-align: center;
   width: 35px;
   height: 35px;
   font-size: 35px;
+}
+
+.medium:hover {
+  color: #ffffff;
 }
 
 .sound-hide {

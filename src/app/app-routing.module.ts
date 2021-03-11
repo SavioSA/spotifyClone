@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'masin',
-    loadChildren: 'src/app/views/main/main.module#MainModule'
+    path: 'outset',
+    loadChildren: () => import('./views/outset/outset.module').then(module => module.OutsetModule)
   }
 ];
 

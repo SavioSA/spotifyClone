@@ -6,7 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent implements OnInit {
-  items = Array.from({ length: 10 }).map((_, i) => `Item #${i}`);
+  playlists = [
+    'Playlist1',
+    'Playlist2',
+    'Playlist3',
+    'Playlist4',
+    'Playlist5',
+    'Playlist6',
+    'Playlist7',
+    'Playlist8',
+    'Playlist9',
+
+  ]
   constructor() { }
 
   ngOnInit() {
