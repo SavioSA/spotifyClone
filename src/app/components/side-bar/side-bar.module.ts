@@ -4,6 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 
 import { SideBarComponent } from './side-bar.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { SideBarComponent } from './side-bar.component';
   imports: [
     CommonModule,
     MatIconModule,
-    ScrollingModule
+    ScrollingModule,
+    RouterModule
   ],
   exports:[SideBarComponent]
 })

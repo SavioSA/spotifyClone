@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SideBarModule } from './components/side-bar/side-bar.module';
 import { BottomBarModule } from './components/bottom-bar/bottom-bar.module';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BottomBarModule } from './components/bottom-bar/bottom-bar.module';
     MatSidenavModule,
     SideBarModule,
     BottomBarModule,
+    MatIconModule,
 
   ],
   providers: [],

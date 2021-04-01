@@ -1,9 +1,16 @@
 <div class="all"  oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 <mat-drawer-container class="container">
-  <mat-drawer class="side-container" mode="side" opened>
+  <mat-drawer #sideMenu class="side-container" mode="over">
     <app-side-bar></app-side-bar>
-  </mat-drawer>
+      <button (click)="toggleSideNav()" class="colapse-btn close-btn">
+        Fechar Menu
+      </button>  </mat-drawer>
   <mat-drawer-content>
+    <div class="colapse-container">
+      <button (click)="toggleSideNav()" class="colapse-btn open-btn">
+        Abrir Menu
+      </button>
+    </div>
     <router-outlet>
     </router-outlet>
   </mat-drawer-content>

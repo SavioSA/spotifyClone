@@ -5,8 +5,7 @@
 }
 
 .side-container {
-  width: 15%;
-  min-width: 110px;
+  min-width: 200px;
   border: 1px solid #000000;
   overflow: hidden;
 }
@@ -17,4 +16,34 @@
   min-height: 500px;
   background-color: #181818;
   overflow: hidden;
+}
+
+mat-drawer-content {
+  background-color: #121212;
+}
+
+.close-btn {
+  position: absolute;
+  bottom: 0.5rem;
+}
+
+.open-btn {
+  margin-bottom: 5px;
+}
+
+.colapse-btn {
+  margin-top: 0.3rem;
+  width: 97%;
+  height: 2rem;
+  border-radius: 10%;
+  background-color: black;
+  color: #fff;
+  font-family: spotFont;
+}
+
+.colapse-container {
+  margin-top: 0.05rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

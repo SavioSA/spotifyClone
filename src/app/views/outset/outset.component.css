@@ -1,14 +1,14 @@
 .container {
   width: 100%;
   height: 100%;
-  background-color: rgb(18, 18, 18);
+  background-color: #121212;
 }
 .top-bar {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 8%;
-  background-color: rgb(18, 18, 18);
+  background-color: #121212;
 }
 
 .control-btns {
@@ -58,6 +58,16 @@
   height: 65%;
   border-radius: 15px;
   background-color: #000000;
+  transition: 0.5s ease-in;
+}
+
+.user-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  transition: 0.5s ease-in;
 }
 
 .user-image {
@@ -77,4 +87,221 @@
   font-size: 27px;
   align-items: center;
   font-family: spotFont;
+}
+
+.emphasis-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 98%;
+  height: 28%;
+  padding-left: 2%;
+}
+
+.emphasis:hover .btn-radius {
+  display: flex;
+}
+
+.emphasis {
+  display: flex;
+  align-items: center;
+  height: 45%;
+  width: 23.5%;
+  min-width: 150px;
+  background-color: #ffffff1a;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  max-height: 80px;
+}
+
+.empashis-image {
+  width: 30%;
+  height: 100%;
+}
+
+.title-emphasis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 40%;
+  font-family: spotFont;
+  margin-left: 3%;
+}
+
+.play-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+}
+
+.btn-play {
+  font-size: 25px;
+  width: 25px;
+  height: 25px;
+  color: #ffffff;
+}
+
+.btn-radius {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #1db954;
+}
+
+.playlists-container {
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  padding-left: 2%;
+  height: 45%;
+  margin-top: 2%;
+}
+
+.playlists-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  font-family: spotFont;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.playlists-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+  width: 100%;
+}
+
+.playlist-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  height: 90%;
+  max-width: 180px;
+  min-width: 130px;
+  min-height: 190px;
+  max-height: 225px;
+  padding-top: 5px;
+  background-color: #ffffff1a;
+  text-align: center;
+  margin-right: 1.4%;
+  margin-bottom: 2%;
+}
+
+.playlist-image {
+  width: 90%;
+  height: 60%;
+  border-radius: 3px;
+}
+
+.playlist-info {
+  padding: 2px;
+}
+
+.playlist-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-family: spotFont;
+  font-size: 15px;
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+
+.playlist-description {
+  padding-left: 2px;
+  padding-right: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-family: spotFont;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 868px) {
+  .playlists-container {
+    margin-bottom: 250px;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .playlists-container {
+    margin-bottom: 440px;
+  }
+  .user-name {
+    display: none;
+  }
+  .user-btn {
+    width: 50px;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .playlists-container {
+    margin-bottom: 440px;
+  }
+}
+
+@media only screen and (max-width: 272px) {
+  .playlists-container {
+    margin-bottom: 1125px;
+  }
+}
+
+@media only screen and (max-width: 744px) {
+  .emphasis-container {
+    margin-bottom: 70px;
+  }
+  .emphasis {
+    max-height: 60px;
+  }
+}
+
+@media only screen and (max-width: 584px) {
+  .emphasis-container {
+    margin-bottom: 150px;
+  }
+  .emphasis {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .emphasis-container {
+    margin-bottom: 400px;
+  }
+  .emphasis {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .btn-radius {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+  }
 }

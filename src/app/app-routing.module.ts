@@ -5,6 +5,10 @@ const routes: Routes = [
   {
     path: 'outset',
     loadChildren: () => import('./views/outset/outset.module').then(module => module.OutsetModule)
+  },
+  {
+    path: '**',
+    redirectTo:'/outset'
   }
 ];
 
