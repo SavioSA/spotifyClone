@@ -1,14 +1,14 @@
-<div class="all"  oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<div class="all" *ngIf="showSystemMenu" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 <mat-drawer-container class="container">
   <mat-drawer #sideMenu class="side-container" mode="over">
     <app-side-bar></app-side-bar>
       <button (click)="toggleSideNav()" class="colapse-btn close-btn">
-        Fechar Menu
+        Close Menu
       </button>  </mat-drawer>
   <mat-drawer-content>
     <div class="colapse-container">
       <button (click)="toggleSideNav()" class="colapse-btn open-btn">
-        Abrir Menu
+        Open Menu
       </button>
     </div>
     <router-outlet>
@@ -17,4 +17,7 @@
 </mat-drawer-container>
 <app-bottom-bar></app-bottom-bar>
 </div>
+<router-outlet >
+
+</router-outlet>
 

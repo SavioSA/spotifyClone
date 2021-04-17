@@ -12,7 +12,7 @@
                   fill="currentColor"></path>
               </svg>
               <div class="menu-title1">
-                Início
+                Home
               </div>
             </div>
           </a>
@@ -26,7 +26,7 @@
                   fill="currentColor" fill-rule="evenodd"></path>
               </svg>
               <div class="menu-title1">
-                Buscar
+                Search
               </div>
             </div>
           </a>
@@ -40,7 +40,7 @@
                   fill="currentColor"></path>
               </svg>
               <div class="menu-title1">
-                Sua biblioteca
+                Your Library
               </div>
             </div>
           </a>
@@ -56,7 +56,7 @@
               playlist_add
             </mat-icon>
             <div class="menu-title1">
-              Criar Playlist
+              Create Playlists
             </div>
           </div>
         </a>
@@ -65,7 +65,7 @@
             favorite
           </mat-icon>
           <div class="menu-title1">
-            Músicas Curtidas
+            Liked Songs
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@
 
       </div>
       <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
-        <div *cdkVirtualFor="let playlist of playlists" class="example-item">{{playlist}}</div>
+        <div *cdkVirtualFor="let playlist of playlists" class="example-item">{{playlist.name}}</div>
       </cdk-virtual-scroll-viewport>
     </div>
 

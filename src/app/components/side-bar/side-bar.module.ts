@@ -5,6 +5,8 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 
 import { SideBarComponent } from './side-bar.component';
 import { RouterModule } from '@angular/router';
+import { AuthService } from 'src/services/auth.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -13,7 +15,11 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     MatIconModule,
     ScrollingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
+  ],
+  providers: [
+    AuthService
   ],
   exports:[SideBarComponent]
 })

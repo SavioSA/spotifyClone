@@ -14,6 +14,13 @@
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "spotufy:build",
+            "proxyConfig": "./proxy.conf.json"
+          }
+          },
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
@@ -129,5 +136,8 @@
   "defaultProject": "spotifyClone",
   "cli": {
     "analytics": "e0a13f2a-7f8f-40a9-b5b6-5741336c4973"
+  },
+  "environments": {
+    "dev": "./.env"
   }
 }

@@ -1,0 +1,43 @@
+.all {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo-content {
+}
+
+.logo {
+  background: url("../../../assets/logo-green.png");
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+  margin-top: 100px;
+  margin-bottom: 2rem;
+}
+
+.name {
+  font-family: spotFont;
+  color: #fff;
+  width: 200px;
+  text-align: center;
+  font-size: 30pt;
+}
+
+button {
+  margin-top: 50px;
+  width: 200px;
+  background-color: #1db954;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.all {
+  background: url("../../../assets/rainbow-matrix.jpg");
+  background-size: cover;
+}

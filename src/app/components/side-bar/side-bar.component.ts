@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/services/auth.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -6,23 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent implements OnInit {
-  playlists = [
-    'Playlist1',
-    'Playlist2',
-    'Playlist3',
-    'Playlist4',
-    'Playlist5',
-    'Playlist6',
-    'Playlist7',
-    'Playlist8',
-    'Playlist9',
-
-  ]
-  constructor() { }
+  playlists = [];
+  constructor( private authService: AuthService, private http: HttpClient) { }
 
   ngOnInit() {
 
-    console.log(window.location.href)
+    setTimeout(() => {
+      this.http.get<any>('https://api.spotify.com/v1/me/playlists', {
+      }).subscribe((data: any) => {
+      this.playlists = data.items;
+    })
+    }, 300);
+
 
   }
 

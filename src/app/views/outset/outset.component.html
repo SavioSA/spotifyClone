@@ -10,8 +10,8 @@
     </div>
     <div class="user-bar">
       <div class="user-btn">
-      <img src="../../../assets/pp (1).jpg" class="user-image">
-        <span class="user-name">Sávio S. Araújo</span>
+      <img src={{userInfo?.urlImage}} class="user-image">
+        <span class="user-name">{{userInfo?.display_name}}</span>
         <mat-icon>arrow_drop_down</mat-icon>
       </div>
     </div>
@@ -23,7 +23,7 @@
   </div>
   <div class="emphasis-container">
     <div *ngFor="let box of emphasis" class="emphasis">
-      <img class="empashis-image" src={{box.urlImg}}>
+      <img class="empashis-image" src={{box.urlImage}}>
       <div class="title-emphasis">
         {{box.name}}
       </div>
@@ -40,35 +40,17 @@
       </div>
       <div class="playlists-row">
         <div class="playlist-box" *ngFor="let item of playlist.items" >
-          <img class="playlist-image" src={{item.urlIgm}}>
+          <img class="playlist-image" src={{item.urlImage}}>
           <div class="playlist-info">
             <div class="playlist-title">
-              {{item.playlistTitle}}
+              {{item.name}}
             </div>
             <div class="playlist-description">
-              {{item.playlistDescription}}
+              {{item?.description || item?.artists[0].name}}
             </div>
           </div>
         </div>
       </div>
     </div>
-        <div class="playlists-container" *ngFor="let playlist of playlists">
-          <div class="playlists-title">
-            {{playlist.title}}
-          </div>
-          <div class="playlists-row">
-            <div class="playlist-box" *ngFor="let item of playlist.items">
-              <img class="playlist-image" src={{item.urlIgm}}>
-              <div class="playlist-info">
-                <div class="playlist-title">
-                  {{item.playlistTitle}}
-                </div>
-                <div class="playlist-description">
-                  {{item.playlistDescription}}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 </div>
 

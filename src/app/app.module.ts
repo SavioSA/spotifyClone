@@ -9,6 +9,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SideBarModule } from './components/side-bar/side-bar.module';
 import { BottomBarModule } from './components/bottom-bar/bottom-bar.module';
 import { MatIconModule } from '@angular/material/icon';
+import { LoginComponent } from './views/login/login.component';
+import { AuthService } from 'src/services/auth.service';
+import { AuthInterceptorInterceptor } from './shared/auth-interceptor.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,13 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule,
 
   ],
-  providers: [],
+  providers: [AuthService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
