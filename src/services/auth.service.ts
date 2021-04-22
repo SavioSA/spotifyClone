@@ -50,9 +50,14 @@ export class AuthService {
         queryReturnedObject[itemSplit[0]] = itemSplit[1];
       }
         this.tokenAcess = sessionStorage.getItem('state') === queryReturnedObject.state ? queryReturnedObject.access_token : false;
-        sessionStorage.setItem('token', this.tokenAcess);
+      sessionStorage.setItem('token', this.tokenAcess);
+      const pathWithoutHash = this.location.path(false);
+      this.location.replaceState(pathWithoutHash);
+      setTimeout(() => {
         this.router.navigate(['/outset']);
+      }, 0);
     }
+
   }
 
   getToken() {
